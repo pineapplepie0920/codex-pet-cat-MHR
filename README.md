@@ -37,3 +37,8 @@ cp pet.json spritesheet.webp ~/.codex/pets/daimao/
 
 制作流程在验收并打包后会清理临时生成条带、提示词和分帧中间文件；本仓库保留的是可安装成品与可复核的最终 QA 产物。
 
+## 许可证与免责声明
+
+本仓库采用 [MIT License](LICENSE)。
+
+> 本项目是社区创作的非官方 Codex 宠物，与 OpenAI 不存在隶属、赞助或认可关系；所有内容均按“现状”提供，不作任何明示或默示保证。
