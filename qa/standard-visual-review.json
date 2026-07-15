@@ -1,0 +1,110 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    {
+      "code": "pre_despill_green_edge",
+      "rows": [1, 2, 3, 4],
+      "evidence": "The pre-despill standard contact sheet shows a thin green edge on directional running, waving, and jumping. review.json reports chroma-adjacent pixels for these rows (running-right 294-369, running-left 294-369, waving 182-198, jumping 170-207 per frame), but every frame has zero edge pixels. Per the requested gate, this is a warning only and is not a visual failure."
+    }
+  ],
+  "per_row": [
+    {
+      "row": 0,
+      "state": "idle",
+      "ok": true,
+      "evidence": [
+        "All 6 required frames are present and the preview timing is 280,110,110,140,140,320 ms.",
+        "The loop is calm but visibly active through a blink and small alternating head tilts, and frame 0 works as a neutral reduced-motion still.",
+        "Identity and apparent scale stay stable; bboxes remain y=5..203 with zero edge pixels and no effects or clipping."
+      ]
+    },
+    {
+      "row": 1,
+      "state": "running-right",
+      "ok": true,
+      "evidence": [
+        "All 8 required frames consistently face and travel toward screen-right.",
+        "The preview shows a readable alternating gait through changing forepaw and hind-leg reach/compression phases rather than a static slide or reversed cadence.",
+        "Body height and baseline stay stable at y=5..203; changing x extents (16..176 at the widest) follow limb extension, with zero edge pixels and no speed lines, dust, shadows, or detached effects."
+      ]
+    },
+    {
+      "row": 2,
+      "state": "running-left",
+      "ok": true,
+      "evidence": [
+        "All 8 required frames consistently face and travel toward screen-left, visibly opposing row 1.",
+        "The ordered preview preserves the same readable alternating gait family and timing without reversal or a static slide.",
+        "Registration matches the rightward row at y=5..203 with corresponding x extents, zero edge pixels, stable identity, and no forbidden motion effects."
+      ]
+    },
+    {
+      "row": 3,
+      "state": "waving",
+      "ok": true,
+      "evidence": [
+        "All 4 required frames form a clear one-paw greeting: the same screen-left paw rises overhead, moves outward, and returns while the other paw remains near the torso.",
+        "The wave is carried entirely by the limb pose; there are no wave marks, arcs, sparkles, or detached effects.",
+        "The pet remains grounded and consistently scaled at y=5..203 with zero edge pixels and no clipping."
+      ]
+    },
+    {
+      "row": 4,
+      "state": "jumping",
+      "ok": true,
+      "evidence": [
+        "All 5 required frames visibly read as crouch/anticipation, lift, tucked apex, descent, and settle; frames 0 and 4 provide matching grounded endpoints and frame 2 clearly tucks both feet forward.",
+        "jumping-registration.json applies one uniform scale of 0.4700854700854701 to every accepted pose, so the pose-height changes are compression/tuck rather than per-frame rescaling.",
+        "Registered bboxes are [41,21,151,203], [42,11,149,188], [42,5,149,173], [42,10,149,188], and [41,21,150,203]. The bottom rises 203->188->173 and returns 188->203, giving 30 px of actual vertical travel with a symmetric lift/descent arc.",
+        "Head, face, paw, and torso drawing scale remains compatible with adjacent standard rows; the shorter endpoint/apex silhouettes are pose-driven and do not create an extraction scale pop.",
+        "Every jump frame has zero edge pixels, safe side margins, and no shadow, dust, landing mark, impact burst, or detached effect."
+      ]
+    },
+    {
+      "row": 5,
+      "state": "failed",
+      "ok": true,
+      "evidence": [
+        "All 8 required frames form a readable sad/deflated reaction through crying, face-covering, and seated flinch poses while retaining the same face and costume.",
+        "Blue tears remain attached at the face; there are no red X marks, detached symbols, scenery, shadows, or loose effects.",
+        "All frames remain y=5..203 with zero edge pixels; width changes follow the seated leg and paw poses rather than a scale or identity pop."
+      ]
+    },
+    {
+      "row": 6,
+      "state": "waiting",
+      "ok": true,
+      "evidence": [
+        "All 6 required frames show an expectant asking gesture through a paw raise, visible paw-pad turn, and return, making the state distinct from idle.",
+        "The loop keeps a stable grounded body and identity at y=5..203 with only 1 px of bbox-width variation and zero edge pixels.",
+        "No floating prompt symbol, text, shadow, or detached effect is present."
+      ]
+    },
+    {
+      "row": 7,
+      "state": "running",
+      "ok": true,
+      "evidence": [
+        "All 6 required frames read as active task work: the pet sits with a consistently held open book while eyes, paw, and page-reading poses change.",
+        "The state does not depict foot-running, directional travel, raised-knee locomotion, speed lines, dust, or trails.",
+        "The seated silhouette remains registered at y=5..203 with zero edge pixels; the book and paw stay attached and the pet identity is stable."
+      ]
+    },
+    {
+      "row": 8,
+      "state": "review",
+      "ok": true,
+      "evidence": [
+        "All 6 required frames show focused inspection through a lowered gaze, restrained head lean, blink/eye changes, and clasped paw movement.",
+        "The quiet review loop remains visually distinct from waiting's raised-paw request, running's book work, and failed's tears and flinch poses.",
+        "The pet stays grounded at y=5..203 with zero edge pixels, no clipping, and no added paper, magnifier, UI, text, or detached effect."
+      ]
+    }
+  ],
+  "global_evidence": [
+    "qa/review.json reports ok=true, no errors, no warnings, exact required frame counts for rows 0-8, component extraction for every row, and zero edge pixels in every used frame.",
+    "The standard contact sheet and all nine GIF previews preserve the same blue cat-suit pet identity, cream face and paws, black facial features, proportions, material, palette, and lighting.",
+    "No used frame is blank, clipped, overlapped, or contaminated by guide marks, text, logos, scenery, cast shadows, glows, or forbidden detached motion effects."
+  ]
+}

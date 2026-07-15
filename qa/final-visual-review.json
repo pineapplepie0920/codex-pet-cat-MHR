@@ -1,0 +1,293 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "errors": [],
+  "warnings": [
+    {
+      "code": "subtle_intermediate_direction_axes",
+      "severity": "minor",
+      "directions": [
+        "022.5",
+        "045",
+        "202.5",
+        "292.5",
+        "315",
+        "337.5"
+      ],
+      "evidence": "The three-reviewer blind consensus found ambiguity only on isolated intermediate axes. Labeled normal-size review confirms the intended quadrants, and the clockwise loop has no reversal or wrong-quadrant pose."
+    },
+    {
+      "code": "continuity_metric_outliers",
+      "severity": "minor",
+      "transitions": [
+        "157.5->180",
+        "202.5->225",
+        "337.5->000"
+      ],
+      "evidence": "The reported pixel-difference and area outliers were inspected side by side at final 192x208 cell size. They are pose-driven head/face pitch and yaw changes with stable feet, lower-body registration, identity, and attachments; no conspicuous snap, clipping, or scale pop is visible."
+    }
+  ],
+  "geometry_and_validation": {
+    "verdict": "pass",
+    "evidence": [
+      "final/validation-extended.json reports ok=true, sprite_version_number=2, RGBA WEBP geometry 1536x2288, 8 columns, and 11 rows.",
+      "All 74 used cells are non-empty, all 14 unused cells are empty, and transparent_rgb_residue_pixels is 0.",
+      "qa/review.json reports ok=true with no errors or warnings; all nine standard rows use component extraction and have the exact required frame counts."
+    ]
+  },
+  "standard_rows": {
+    "verdict": "pass",
+    "identity_evidence": "The blue cat hood, cream face and paws, black facial design, compact proportions, plush material, palette, lighting, tail, and expression language remain recognizable and consistent across rows 0-8. No used frame is blank, clipped, overlapped, or contaminated by guide marks, scenery, text, logos, shadows, glows, dust, motion trails, or detached effects.",
+    "neutral_cell": {
+      "verdict": "pass",
+      "location": "row 0 column 6",
+      "evidence": "The dedicated neutral cell is non-empty, front-facing, restful, identity-consistent, correctly scaled, and visually distinct from 000 up. Validation records 17566 nontransparent pixels."
+    },
+    "rows": [
+      {
+        "row": 0,
+        "state": "idle",
+        "frames": 6,
+        "verdict": "pass",
+        "evidence": "Calm blink and restrained alternating head tilts create visible micro-motion; frame 0 works as a reduced-motion still and the loop does not pop."
+      },
+      {
+        "row": 1,
+        "state": "running-right",
+        "frames": 8,
+        "verdict": "pass",
+        "evidence": "Every frame faces screen-right and the ordered preview shows a readable alternating limb cadence without reversal, clipping, or forbidden speed effects."
+      },
+      {
+        "row": 2,
+        "state": "running-left",
+        "frames": 8,
+        "verdict": "pass",
+        "evidence": "Every frame faces screen-left, visibly opposes row 1, and preserves the alternating cadence and identity without timing reversal."
+      },
+      {
+        "row": 3,
+        "state": "waving",
+        "frames": 4,
+        "verdict": "pass",
+        "evidence": "The same paw rises, moves outward, and returns; the gesture uses limb pose only, with no wave marks or detached effects."
+      },
+      {
+        "row": 4,
+        "state": "jumping",
+        "frames": 5,
+        "verdict": "pass",
+        "evidence": "Crouch, lift, tucked apex, descent, and settle are clear. jumping-registration.json uses one uniform scale of 0.4700854700854701 and target bottoms 203,188,173,188,203, producing a symmetric 30-pixel vertical arc without a scale pop or landing effect."
+      },
+      {
+        "row": 5,
+        "state": "failed",
+        "frames": 8,
+        "verdict": "pass",
+        "evidence": "Crying, face-covering, and seated deflation form a distinct failure reaction; the blue tears remain attached to the face and no loose symbols or effects appear."
+      },
+      {
+        "row": 6,
+        "state": "waiting",
+        "frames": 6,
+        "verdict": "pass",
+        "evidence": "The raised paw and visible paw-pad turn read as an expectant request and remain clearly distinct from idle and review."
+      },
+      {
+        "row": 7,
+        "state": "running",
+        "frames": 6,
+        "verdict": "pass",
+        "evidence": "The attached open book, eye changes, and paw movement read as active task work rather than literal locomotion; there is no travel, raised-knee run, dust, or trail."
+      },
+      {
+        "row": 8,
+        "state": "review",
+        "frames": 6,
+        "verdict": "pass",
+        "evidence": "Lowered gaze, blink, restrained lean, and clasped-paw motion read as focused inspection and remain distinct from waiting, running, and failed."
+      }
+    ]
+  },
+  "look_directions": {
+    "verdict": "pass_with_minor_warnings",
+    "identity_evidence": "All 16 cells preserve the same cat identity, face construction, hood shape, cream markings, plush material, palette, proportions, and grounded lower-body scale. No replacement eyes, whole-sprite affine rotation, clipping, detached effect, seam band, or broken attachment is visible.",
+    "order_evidence": "Rows 9-10 contain all 16 directions in the required clockwise order: 000 through 157.5, then 180 through 337.5. Every cell is non-empty and distinct from the neutral/rest cell.",
+    "cardinals": [
+      {
+        "direction": "000",
+        "expected": "up",
+        "verdict": "pass",
+        "evidence": "The face plane, muzzle, chin, and eyes lift unmistakably upward."
+      },
+      {
+        "direction": "090",
+        "expected": "screen-right",
+        "verdict": "pass",
+        "evidence": "The nose, eyes, and cream face plane turn unmistakably toward screen-right."
+      },
+      {
+        "direction": "180",
+        "expected": "down",
+        "verdict": "pass",
+        "evidence": "The centered face is strongly bowed with a low eye line and muzzle."
+      },
+      {
+        "direction": "270",
+        "expected": "screen-left",
+        "verdict": "pass",
+        "evidence": "The nose, eyes, and cream face plane turn unmistakably toward screen-left."
+      }
+    ],
+    "directions": [
+      {
+        "direction": "000",
+        "expected": "up",
+        "verdict": "pass"
+      },
+      {
+        "direction": "022.5",
+        "expected": "up-right",
+        "verdict": "warning",
+        "evidence": "Upward pitch is clear and the small screen-right shift is readable in the labeled loop; blind horizontal consensus was ambiguous."
+      },
+      {
+        "direction": "045",
+        "expected": "up-right",
+        "verdict": "warning",
+        "evidence": "Rightward yaw is clear and upward pitch remains visible in sequence; blind vertical consensus was ambiguous."
+      },
+      {
+        "direction": "067.5",
+        "expected": "up-right",
+        "verdict": "pass"
+      },
+      {
+        "direction": "090",
+        "expected": "right",
+        "verdict": "pass"
+      },
+      {
+        "direction": "112.5",
+        "expected": "down-right",
+        "verdict": "pass"
+      },
+      {
+        "direction": "135",
+        "expected": "down-right",
+        "verdict": "pass"
+      },
+      {
+        "direction": "157.5",
+        "expected": "down-right",
+        "verdict": "pass"
+      },
+      {
+        "direction": "180",
+        "expected": "down",
+        "verdict": "pass"
+      },
+      {
+        "direction": "202.5",
+        "expected": "down-left",
+        "verdict": "warning",
+        "evidence": "Downward pitch is clear and the small screen-left shift is readable in sequence; blind horizontal consensus was ambiguous."
+      },
+      {
+        "direction": "225",
+        "expected": "down-left",
+        "verdict": "pass"
+      },
+      {
+        "direction": "247.5",
+        "expected": "down-left",
+        "verdict": "pass"
+      },
+      {
+        "direction": "270",
+        "expected": "left",
+        "verdict": "pass"
+      },
+      {
+        "direction": "292.5",
+        "expected": "up-left",
+        "verdict": "warning",
+        "evidence": "Leftward yaw is clear and the upward return is coherent in the labeled loop; blind vertical consensus was ambiguous."
+      },
+      {
+        "direction": "315",
+        "expected": "up-left",
+        "verdict": "warning",
+        "evidence": "The face remains left of center while the eye line rises; blind vertical consensus was ambiguous."
+      },
+      {
+        "direction": "337.5",
+        "expected": "up-left",
+        "verdict": "warning",
+        "evidence": "A subtle residual left cue and rising eye line lead coherently into 000; blind horizontal and vertical consensus was ambiguous, but there is no wrong-quadrant pose or reversal."
+      }
+    ],
+    "blind_validation": {
+      "verdict": "pass",
+      "reviewers": 3,
+      "fresh_isolated_reviewers": true,
+      "preserved_without_rerun": true,
+      "source_files": [
+        "qa/direction-blind-verdicts-1.json",
+        "qa/direction-blind-verdicts-2.json",
+        "qa/direction-blind-verdicts-3.json"
+      ],
+      "evidence": "The look rows are unchanged, so the existing exactly-three-reviewer result remains applicable. qa/direction-blind-validation.json reports ok=true, both hard cardinal pairs pass, unconfirmed is empty, and its seven warnings are intermediate-axis review gates only."
+    }
+  },
+  "continuity": {
+    "verdict": "pass_with_minor_warnings",
+    "ordered_loop_evidence": "At normal cell size the 16-pose loop advances clockwise without backtracking. Feet and lower body remain grounded, facial yaw and pitch progress coherently, and there is no identity, baseline, prop, or attachment discontinuity.",
+    "boundary_checks": [
+      {
+        "transition": "157.5->180",
+        "verdict": "pass_with_warning",
+        "metrics": {
+          "diffPixels": 3544,
+          "centerDelta": 7.810249675906654,
+          "areaRatio": 1.106034051076615
+        },
+        "evidence": "The right/down three-quarter face resolves into the centered down cardinal. The larger difference is an intentional yaw-to-front change; feet, body baseline, scale, identity, and attachments remain stable and no visible snap or clip occurs."
+      },
+      {
+        "transition": "337.5->000",
+        "verdict": "pass_with_warning",
+        "metrics": {
+          "diffPixels": 3407,
+          "centerDelta": 5.5,
+          "areaRatio": 1.1717803030303031
+        },
+        "evidence": "The near-up-left face opens and pitches upward into 000. The face-plane area change is visible but pose-driven; the feet and torso anchor remain stable and there is no clipping, identity swap, or broken silhouette."
+      },
+      {
+        "transition": "202.5->225",
+        "verdict": "pass_with_warning",
+        "metrics": {
+          "diffPixels": 2095,
+          "centerDelta": 1.4142135623730951,
+          "areaRatio": 1.0918139475531168
+        },
+        "evidence": "The local difference outlier is a coherent increase in down-left yaw with negligible center movement and no visible snap."
+      }
+    ],
+    "alpha_holes": {
+      "verdict": "pass",
+      "reported_direction_count": 13,
+      "reported_row_range": "y=8..39",
+      "evidence": "A threshold-matched alpha flood-fill was checked against every span reported by qa/look-continuity.json. Every reported alpha<=16 pixel was connected to the exterior (reported_not_exterior=0 for all 16 directions); the spans are the open V-shaped valley between the two ears. No enclosed body hole, scanline gap, seam band, or sliced-tile artifact is visible."
+    }
+  },
+  "chroma": {
+    "verdict": "pass",
+    "evidence": [
+      "qa/chroma-despill-extended.json reports ok=true, algorithm=edge-local-chroma-spill-suppression, alpha_preserved=true, changed_pixels=80452, decontaminated_pixels=77071, spill_suppressed_pixels=80452, and rejected_pixels=0.",
+      "final/validation-extended.json reports no errors or warnings, zero opaque chroma-key cells, zero chroma-fringe cells, and zero transparent RGB residue pixels.",
+      "The cleaned extended contact sheet has transparent checkerboard backgrounds in every used cell and no opaque key-color panels."
+    ]
+  }
+}

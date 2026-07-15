@@ -1,0 +1,159 @@
+{
+  "ok": true,
+  "cardinalsPass": true,
+  "blindValidationOk": true,
+  "directions": [
+    {
+      "degrees": 0,
+      "expected": "up",
+      "verdict": "pass",
+      "observed": "Chin and cream face plane are lifted high; both eyes aim upward.",
+      "horizontalEvidence": "Frontal and centered as expected for the vertical cardinal.",
+      "verticalEvidence": "Raised muzzle and high eye line are visibly opposite the bowed 180 pose.",
+      "reason": "Unmistakable labeled cardinal and unanimous blind hard-gate pass."
+    },
+    {
+      "degrees": 22.5,
+      "expected": "up-right",
+      "verdict": "warning",
+      "observed": "Clearly lifted face with a small screen-right shift.",
+      "horizontalEvidence": "Nose and face plane begin moving right of the hood center.",
+      "verticalEvidence": "Chin and eyes remain visibly raised.",
+      "reason": "Labeled ordered review confirms the quadrant; blind horizontal classification was ambiguous at normal size."
+    },
+    {
+      "degrees": 45,
+      "expected": "up-right",
+      "verdict": "warning",
+      "observed": "Clear rightward yaw with a modest upward pitch.",
+      "horizontalEvidence": "Nose and cream face plane sit right of head center.",
+      "verticalEvidence": "Eye line remains above the level 090 family but is subtle.",
+      "reason": "Correct labeled quadrant with blind uncertainty only on the intermediate vertical axis."
+    },
+    {
+      "degrees": 67.5,
+      "expected": "up-right",
+      "verdict": "pass",
+      "observed": "Strong screen-right three-quarter face retains a lifted gaze.",
+      "horizontalEvidence": "Nose and face surface are clearly displaced screen-right.",
+      "verticalEvidence": "Eyes and chin remain raised before reaching level 090.",
+      "reason": "Both axes are readable and passed blind review."
+    },
+    {
+      "degrees": 90,
+      "expected": "right",
+      "verdict": "pass",
+      "observed": "Maximum screen-right face turn with level pitch.",
+      "horizontalEvidence": "Eyes, nose, and cream face plane unmistakably aim screen-right.",
+      "verticalEvidence": "Level pitch separates this cardinal from adjacent up-right and down-right poses.",
+      "reason": "Matches the approved anchor and passed the blind hard gate."
+    },
+    {
+      "degrees": 112.5,
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "Rightward face turn begins lowering.",
+      "horizontalEvidence": "Nose and face plane remain screen-right.",
+      "verticalEvidence": "Pupils and muzzle sit lower than in 090.",
+      "reason": "Both axes are readable and continuous."
+    },
+    {
+      "degrees": 135,
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "Clearly bowed face retains rightward yaw.",
+      "horizontalEvidence": "Muzzle remains right of head center.",
+      "verticalEvidence": "Lowered eyes and chin make the downward component unmistakable.",
+      "reason": "Both axes passed blind review."
+    },
+    {
+      "degrees": 157.5,
+      "expected": "down-right",
+      "verdict": "pass",
+      "observed": "Near-down pose retains residual screen-right yaw.",
+      "horizontalEvidence": "Face plane remains slightly right of center.",
+      "verticalEvidence": "Strong chin tuck and low eye line lead naturally into 180.",
+      "reason": "Both axes passed blind review and the row seam passed independent normal-size review."
+    },
+    {
+      "degrees": 180,
+      "expected": "down",
+      "verdict": "pass",
+      "observed": "Frontal face is strongly bowed with eyes and muzzle low in the hood.",
+      "horizontalEvidence": "Centered as expected for the vertical cardinal.",
+      "verticalEvidence": "Lowered head and eye line are unmistakably down.",
+      "reason": "Matches the approved anchor and passed the blind hard gate."
+    },
+    {
+      "degrees": 202.5,
+      "expected": "down-left",
+      "verdict": "warning",
+      "observed": "Clearly lowered face begins turning toward screen-left.",
+      "horizontalEvidence": "Small leftward shift is visible in labeled loop context.",
+      "verticalEvidence": "Downward pitch passed blind review.",
+      "reason": "Correct labeled quadrant; blind horizontal classification was ambiguous at the smallest intermediate step."
+    },
+    {
+      "degrees": 225,
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "Clear combined down-left head and face direction.",
+      "horizontalEvidence": "Nose and face surface sit screen-left.",
+      "verticalEvidence": "Eyes and muzzle remain lowered.",
+      "reason": "Both axes are clear in labeled and blind review."
+    },
+    {
+      "degrees": 247.5,
+      "expected": "down-left",
+      "verdict": "pass",
+      "observed": "Strong screen-left turn retains downward pitch.",
+      "horizontalEvidence": "Face plane approaches the left cardinal.",
+      "verticalEvidence": "Muzzle and eyes remain visibly low.",
+      "reason": "Both axes are readable and continuous into 270."
+    },
+    {
+      "degrees": 270,
+      "expected": "left",
+      "verdict": "pass",
+      "observed": "Maximum screen-left face turn with level pitch.",
+      "horizontalEvidence": "Eyes, nose, and cream face plane unmistakably aim screen-left.",
+      "verticalEvidence": "Level pitch separates the cardinal from the diagonals.",
+      "reason": "Matches the approved anchor and passed the blind hard gate."
+    },
+    {
+      "degrees": 292.5,
+      "expected": "up-left",
+      "verdict": "warning",
+      "observed": "Clear screen-left yaw begins returning upward.",
+      "horizontalEvidence": "Face and nose remain distinctly screen-left.",
+      "verticalEvidence": "The upward cue is modest and was ambiguous in blind review.",
+      "reason": "Labeled ordered loop confirms the up-left quadrant without reversal."
+    },
+    {
+      "degrees": 315,
+      "expected": "up-left",
+      "verdict": "warning",
+      "observed": "More frontal up-left pose with a stable leftward cue.",
+      "horizontalEvidence": "Nose and face plane remain left of center.",
+      "verticalEvidence": "Raised eye line is visible in labeled context but ambiguous to the blind majority.",
+      "reason": "Correct labeled quadrant; only the intermediate vertical axis is subtle."
+    },
+    {
+      "degrees": 337.5,
+      "expected": "up-left",
+      "verdict": "warning",
+      "observed": "Near-frontal pose retains subtle up-left intent one step before 000.",
+      "horizontalEvidence": "Small residual leftward face placement is visible in the ordered loop.",
+      "verticalEvidence": "Upward eye line is subtle and was ambiguous in blind review.",
+      "reason": "Labeled loop and seam review confirm the intended quadrant; no cardinal or reversal failure."
+    }
+  ],
+  "continuityReview": {
+    "verdict": "pass",
+    "reason": "Metric outliers at 157.5->180 and 337.5->000 were inspected at normal size and do not create a conspicuous baseline, scale, identity, or attachment snap."
+  },
+  "alphaHolesReview": {
+    "verdict": "pass",
+    "reason": "All reported transparent spans are exterior-connected negative space in the V-shaped valley between the ears, not enclosed body holes or seam bands."
+  }
+}
